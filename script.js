@@ -5,14 +5,14 @@ let game = {}
 
 function tick(diff) {
   // your tick things here
-  game.points = game.points.add(D(1).mul(diff/1000)) // makes points go up bvy 1/s
+  game.watts = game.watts.add(D(1).mul(diff/1000)) // makes points go up bvy 1/s
 }
 
 var app = Vue.createApp({
   data() {
     return {
       lastTick: Date.now(), // add your vars to this object, access them with game.yourVariable
-      points: D(0)
+      watts: D(0)
     }
   },
 })
