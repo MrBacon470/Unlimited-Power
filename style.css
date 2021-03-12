@@ -1,0 +1,12 @@
+/* CSS files add styling rules to your content */
+
+* {
+  font-family: 'Inconsolata', monospace;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  margin: 2em;
+}
+
+
