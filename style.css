@@ -9,4 +9,6 @@ body {
   margin: 2em;
 }
 
-
+div {
+  font-family: 'Inconsolata', monospace;
+}
