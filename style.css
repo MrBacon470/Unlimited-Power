@@ -1,14 +1,14 @@
 /* CSS files add styling rules to your content */
 
 * {
-  font-family: Inconsolata;
+  font-family: 'Inconsolata';
 }
 
 body {
-  font-family: Inconsolata;
+  font-family: 'Inconsolata';
   margin: 2em;
 }
 
 div {
-  font-family: Inconsolata;
+  font-family: 'Inconsolata';
 }
