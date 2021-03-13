@@ -9,6 +9,12 @@ button {
     outline: none;
 }
 
+.powerGen:hover {
+    background: yellow;
+    color:black;
+    border: 2px solid yellow;
+}
+
 button:hover {
     background: white;
     color:black;
