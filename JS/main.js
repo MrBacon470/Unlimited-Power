@@ -46,8 +46,7 @@ window.setInterval(function() {
 }, 100)
 
 window.setInterval(function () {
-
-    localStorage.setItem("data", btoa(JSON.stringify(data)));
+    Save()
 }, 1000)
 
 function Notate(x) {

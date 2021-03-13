@@ -1,9 +1,32 @@
 
+function Save() {
+    let data = {
+        watts: watts,
+        genLevels: genLevels,
+    }
+    localStorage.setItem("data",JSON.stringify(data))
+}
 
-let saveData;
+function Load() {
 
-if(localStorage.getItem("data") !== "")
-   saveData = JSON.parse(atob(localStorage.getItem("data")))
+    let saveData = localStorage.getItem("data")
+
+    if(!saveData) {
+        return
+    }
+    else {
+        saveData = JSON.parse(saveData)
+    }
+
+    if(typeof saveData.watts !== "undefined"){
+        watts = saveData.watts
+    }
+    for(let i = 0; i < 8; i++) {
+        if(typeof saveData.genLevels !== "undefined") genLevels[i] = saveData.genLevels[i]
+    }
+
+}
+console.log(localStorage.getItem("data"))
 
 
 let watts = 0
@@ -33,11 +56,4 @@ let generatorInfo = [
 
 let genCosts = new Array(8).fill(0)
 
-let data = {
-    watts: watts,
-    genLevels: genLevels,
-}
-
-if (typeof saveData.watts > watts) watts = saveData.watts;
-
-if(typeof saveData.genLevels > genLevels) genLevels = saveData.genLevels;
+Load()
