@@ -44,12 +44,10 @@ window.setInterval(function() {
     watts += 1e7 * genLevels[7];
 
     document.getElementById("watts").innerHTML = `Watts: ${watts.toFixed(2)}`
-
-
-
-}, 50)
+}, 100)
 
 window.setInterval(function () {
+
     localStorage.setItem("data", btoa(JSON.stringify(data)));
 }, 1000)
 

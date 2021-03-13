@@ -1,4 +1,4 @@
-let saveData = JSON.parse(localStorage.getItem("data"));
+let saveData = JSON.parse(atob(localStorage.getItem("data")));
 
 
 let watts = 0
