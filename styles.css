@@ -6,4 +6,12 @@
 
 button {
     border: 2px solid white;
+    outline: none;
 }
+
+button:hover {
+    background: white;
+    color:black;
+}
+
+button:focus { outline: none }

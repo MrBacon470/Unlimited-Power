@@ -13,14 +13,14 @@ let genBaseCosts = [
  let genCosts = new Array(8).fill(0);
 
 for(let i = 0; i < 8; i++)
-    genCosts[i] = Math.floor(genBaseCosts[i] * Math.pow(1.1, genLevels[i]));
+    genCosts[i] = (genBaseCosts[i] * Math.pow(1.1, genLevels[i]));
 
-document.getElementById("genCost1").innerHTML = `Cost: ${genCosts[0]}`
-document.getElementById("genCost2").innerHTML = `Cost: ${genCosts[1]}`
+document.getElementById("genCost1").innerHTML = `Cost: ${genCosts[0].toFixed(2)}`
+document.getElementById("genCost2").innerHTML = `Cost: ${genCosts[1].toFixed(2)}`
 
 function powerClick(number) {
     watts += number
-    document.getElementById("watts").innerHTML = `Watts: ${watts}`
+    document.getElementById("watts").innerHTML = `Watts: ${watts.toFixed(2)}`
 }
 
 function purchaseGenerator(number) {
@@ -32,15 +32,15 @@ function purchaseGenerator(number) {
         genLevels[number]++;
         watts -= genCosts[number];
         for(let i = 0; i < 8; i++)
-            genCosts[i] = (genBaseCosts[i] * Math.pow(2, genLevels[i]));
+            genCosts[i] = (genBaseCosts[i] * Math.pow(1.15, genLevels[i]));
         switch(number) {
             case 0:
-                document.getElementById("genCost1").innerHTML = `Cost: ${genCosts[0]}`
-                document.getElementById("gen1").innerHTML = `Manual Generators: ${genLevels[0]}`
+                document.getElementById("genCost1").innerHTML = `Cost: ${genCosts[0].toFixed(2)}`
+                document.getElementById("gen1").innerHTML = `Manual Generators: ${genLevels[0].toFixed(2)}`
                 break
             case 1:
-                document.getElementById("genCost2").innerHTML = `Cost: ${genCosts[1]}`
-                document.getElementById("gen2").innerHTML = `Wood Burners: ${genLevels[1]}`
+                document.getElementById("genCost2").innerHTML = `Cost: ${genCosts[1].toFixed(2)}`
+                document.getElementById("gen2").innerHTML = `Wood Burners: ${genLevels[1].toFixed(2)}`
                 break
         }
 
@@ -51,7 +51,7 @@ window.setInterval(function() {
     powerClick(genLevels[0])
     powerClick(10 * genLevels[1])
 
-    document.getElementById("watts").innerHTML = `Watts: ${watts}`
+    document.getElementById("watts").innerHTML = `Watts: ${watts.toFixed(2)}`
 
 
 }, 1000)
