@@ -1,3 +1,6 @@
+let saveData = JSON.parse(localStorage.getItem("data"));
+
+
 let watts = 0
 let genLevels = new Array(8).fill(0)
 let genBaseCosts = [
@@ -24,3 +27,12 @@ let generatorInfo = [
 ]
 
 let genCosts = new Array(8).fill(0)
+
+let data = {
+    watts: watts,
+    genLevels: genLevels,
+}
+
+if (typeof saveData.watts !== "undefined") watts = saveData.watts;
+
+if(typeof saveData.genLevels !== "undefined") genLevels = saveData.genLevels;

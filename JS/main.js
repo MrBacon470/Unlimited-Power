@@ -1,4 +1,6 @@
 
+
+
 for(let i = 0; i < 8; i++)
     genCosts[i] = (genBaseCosts[i] * Math.pow(1.1, genLevels[i]));
 
@@ -43,8 +45,12 @@ window.setInterval(function() {
 
     document.getElementById("watts").innerHTML = `Watts: ${watts.toFixed(2)}`
 
-    localStorage
+
 
 }, 50)
+
+window.setInterval(function () {
+    localStorage.setItem("data", btoa(JSON.stringify(data)));
+}, 1000)
 
 
