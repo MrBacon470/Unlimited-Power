@@ -1,5 +1,5 @@
 let watts = 0
-let genLevels = new Array(8).fill(0);
+let genLevels = new Array(8).fill(0)
 let genBaseCosts = [
     10,
     100,
@@ -17,4 +17,4 @@ let generatorInfo = [
     {genID: 'gen2', costID: 'genCost2', name:'Wood Burners'},
 ]
 
-let genCosts = new Array(8).fill(0);
+let genCosts = new Array(8).fill(0)
