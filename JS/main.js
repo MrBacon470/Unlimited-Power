@@ -11,7 +11,6 @@ for(let i = 0; i < generatorInfo.length; i++) {
 
 function powerClick(number) {
     watts += number
-    document.getElementById("watts").innerHTML = `Watts: ${watts.toFixed(2)}`
 }
 
 function purchaseGenerator(number) {
