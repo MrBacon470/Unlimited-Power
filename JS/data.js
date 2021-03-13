@@ -15,6 +15,12 @@ let genBaseCosts = [
 let generatorInfo = [
     {genID: 'gen1', costID: 'genCost1', name:'Manual Generators'},
     {genID: 'gen2', costID: 'genCost2', name:'Wood Burners'},
+    {genID: 'gen3', costID: 'genCost3', name:'Coal Generators'},
+    {genID: 'gen4', costID: 'genCost4', name:'Oil Generators'},
+    {genID: 'gen5', costID: 'genCost5', name:'Natural Gas Generators'},
+    {genID: 'gen6', costID: 'genCost6', name:'Steam Turbines'},
+    {genID: 'gen7', costID: 'genCost7', name:'Nuclear Reactor'},
+    {genID: 'gen8', costID: 'genCost8', name:'Fusion Reactor'},
 ]
 
 let genCosts = new Array(8).fill(0)
