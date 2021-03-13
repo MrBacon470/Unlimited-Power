@@ -25,7 +25,7 @@ function purchaseGenerator(number) {
 
         for(let i = 0; i < 2; i++) {
             document.getElementById(`${generatorInfo[i].costID}`).innerHTML = `Cost: ${genCosts[i].toFixed(2)}`
-            document.getElementById(`${generatorInfo[i].genID}`).innerHTML = `${generatorInfo[i].name}: ${genCosts[i].toFixed(2)}`
+            document.getElementById(`${generatorInfo[i].genID}`).innerHTML = `${generatorInfo[i].name}: ${genLevels[i].toFixed(2)}`
         }
 
     }
