@@ -1,4 +1,9 @@
-let saveData = JSON.parse(atob(localStorage.getItem("data")));
+
+
+let saveData;
+
+if(localStorage.getItem("data") !== "")
+   saveData = JSON.parse(atob(localStorage.getItem("data")))
 
 
 let watts = 0
@@ -33,6 +38,6 @@ let data = {
     genLevels: genLevels,
 }
 
-if (typeof saveData.watts !== "undefined") watts = saveData.watts;
+if (typeof saveData.watts > watts) watts = saveData.watts;
 
-if(typeof saveData.genLevels !== "undefined") genLevels = saveData.genLevels;
+if(typeof saveData.genLevels > genLevels) genLevels = saveData.genLevels;
