@@ -2,6 +2,11 @@
     font-family: 'Inconsolata', monospace;
     background: black;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 button {
@@ -10,8 +15,35 @@ button {
     padding: 12px;
     margin: 12px;
 }
+
+.generatorHolder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container flex flex-col flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex flex-row {
+    display: flex;
+    flex-direction: column;
+}
+
 div {
     margin: 12px;
+}
+
+.yellow {
+    color:yellow;
+}
+
+.purple {
+    color:rebeccapurple;
 }
 
 .powerGen:hover {
